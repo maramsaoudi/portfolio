@@ -22,7 +22,7 @@ export const projects: Project[] = [
     description: 'A comprehensive CRM platform built with React and Django, featuring user roles, Docker containerization, and CI/CD pipeline integration.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
     tech: ['React', 'Django', 'MySQL', 'Docker'],
-    demo: 'https://github.com/SamehAMKouki',
+    demo: 'https://lnkd.in/eAKEksG3',
     year: '2024',
     duration: '3 months',
     type: 'Professional'
