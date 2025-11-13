@@ -37,7 +37,7 @@ export const resume = {
       id: 'w1',
       title: 'Moving CRM Platform — IT-Factory',
       role: 'Internship → Part-Time',
-      period: '2023 – Present',
+      period: 'Jul 2025 – Present',
       tech: ['React', 'Django', 'MySQL'],
       details: ['Built and maintained a Django REST API with MySQL', 'Implemented user roles, Dockerized the app, and integrated CI/CD pipelines']
     },
