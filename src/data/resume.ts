@@ -44,7 +44,7 @@ export const resume = {
     {
       id: 'w2',
       title: 'E-Commerce Site — K-Technologie',
-      role: 'Contract (Jul 2024)',
+      role: 'Jul 2024',
       period: 'Jul 2024',
       tech: ['Angular', 'Django', 'MySQL'],
       details: ['Built Angular frontend and Django REST API', 'Containerized app with Docker and configured CI/CD']
@@ -52,8 +52,8 @@ export const resume = {
     {
       id: 'w3',
       title: 'Healthcare Insurance Application — ArabSoft',
-      role: 'Feb 2023 – May 2023',
-      period: 'Feb 2023 – May 2023',
+      role: 'Feb 2023 – Juin 2023',
+      period: 'Feb 2023 – Juin 2023',
       tech: ['Angular', 'Spring Boot'],
       details: ['Built frontend modules and backend services in Spring Boot', 'Implemented role-based access and reduced onboarding time by ~40%']
     },
