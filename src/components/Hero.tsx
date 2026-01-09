@@ -7,18 +7,18 @@ export default function Hero() {
     <section className="relative py-20 sm:py-32 overflow-hidden">
       {/* Animated background gradient orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div 
+        <motion.div
           className="absolute top-1/4 -left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, 50, 0],
             y: [0, 30, 0],
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, -50, 0],
             y: [0, -30, 0],
             scale: [1, 1.2, 1]
@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="container relative z-10">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image - First on mobile, second on desktop */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -42,8 +42,8 @@ export default function Hero() {
               className="relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-              <img 
-                src="/assets/images/me.jpg" 
+              <img
+                src="/assets/images/me.jpg"
                 alt={resume.name}
                 className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover border-4 border-cyan-200/50 dark:border-slate-700/50 shadow-2xl"
               />
@@ -90,18 +90,31 @@ export default function Hero() {
               {resume.profile}
             </motion.p>
 
-            <motion.div 
+            <motion.div
               className="mt-8 flex flex-wrap gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
-              <a href="/assets/images/cv.png" className="btn btn-primary" download>
-                📥 Download CV
-              </a>
-              <a href="#contact" className="btn btn-secondary">
-                📧 Contact Me
-              </a>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="/assets/cv/Saif_Chaalane_CV.pdf"
+                  download="Saif_Chaalane_CV.pdf"
+                  className="btn btn-primary"
+                >
+                  📥 Download CV
+                </a>
+
+                <a
+                  href="/assets/cv/Saif_Chaalane_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                >
+                  👀 View CV
+                </a>
+              </div>
+
             </motion.div>
           </motion.div>
         </div>

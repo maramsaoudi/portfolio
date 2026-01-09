@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -15,11 +15,15 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-// Get JSON data
+// Read JSON body
 $data = json_decode(file_get_contents('php://input'), true);
 
 // Validate input
-if (empty($data['name']) || empty($data['email']) || empty($data['message'])) {
+if (
+    empty($data['name']) ||
+    empty($data['email']) ||
+    empty($data['message'])
+) {
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'All fields are required']);
     exit();
@@ -36,19 +40,22 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-// Email configuration - UPDATE THIS WITH YOUR EMAIL
-$to = 'Samehabdelmajid.kouki@sesame.com.tn'; // Change this to your email
-$subject = 'New Contact Form Submission from Portfolio - ' . $name;
+// ✅ YOUR EMAIL (destination)
+$to = 'saifchaalene5@gmail.com';
+
+// Email subject
+$subject = '📩 New Portfolio Contact — ' . $name;
 
 // Email body
-$body = "You have received a new message from your portfolio contact form.\n\n";
-$body .= "Name: " . $name . "\n";
-$body .= "Email: " . $email . "\n\n";
-$body .= "Message:\n" . $message . "\n";
+$body  = "You received a new message from your portfolio contact form.\n\n";
+$body .= "Name: {$name}\n";
+$body .= "Email: {$email}\n\n";
+$body .= "Message:\n{$message}\n";
 
-// Email headers
-$headers = "From: noreply@yourdomain.com\r\n";
-$headers .= "Reply-To: " . $email . "\r\n";
+// Headers (important)
+$headers  = "From: Portfolio Contact <noreply@yourdomain.com>\r\n";
+$headers .= "Reply-To: {$email}\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 // Send email
@@ -59,4 +66,3 @@ if (mail($to, $subject, $body, $headers)) {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Failed to send message. Please try again later.']);
 }
-?>

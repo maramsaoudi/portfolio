@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 relative">
       <div className="container">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -25,35 +25,35 @@ export default function About() {
             <div className="glass-card">
               <h3 className="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🎯 My Journey</h3>
               <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                I'm a passionate full-stack software engineer currently pursuing my IT Engineering degree at SESAME University. 
-                With a strong foundation in both frontend and backend technologies, I specialize in building scalable, 
-                user-friendly web applications that solve real-world problems.
+                I'm a full-stack software engineer holding an Engineering degree in Computer Science from ESPRIT.
+                I enjoy building reliable products that combine clean architecture, strong backend foundations,
+                and modern user interfaces.
               </p>
             </div>
 
             <div className="glass-card">
               <h3 className="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">💡 What I Do</h3>
               <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                I transform ideas into elegant, performant solutions using modern frameworks like React, Angular, and Django. 
-                My experience spans from CRM platforms to e-commerce solutions, with a focus on clean code, 
-                containerized deployment, and agile methodologies.
+                I develop end-to-end web solutions using React and Angular on the frontend, and backend stacks like
+                Node.js, PHP (including Joomla), and Django. I'm comfortable designing REST application programming
+                interfaces (REST APIs), integrating third-party services, and delivering features from idea to production.
               </p>
             </div>
 
             <div className="glass-card">
               <h3 className="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🚀 My Approach</h3>
               <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                I believe in continuous learning and best practices. Whether it's implementing CI/CD pipelines, 
-                optimizing database queries, or crafting intuitive UIs, I approach every challenge with curiosity 
-                and a commitment to excellence.
+                I focus on maintainable code, clear collaboration, and consistent delivery. I care about performance,
+                testing, and practical automation-like Continuous Integration and Continuous Delivery (CI/CD) to ship
+                fast without sacrificing quality.
               </p>
             </div>
 
             <div className="glass-card">
               <h3 className="text-xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🌍 Beyond Code</h3>
               <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                When I'm not coding, I'm actively involved in community leadership as Vice-president of El Alia Junior Chamber International, 
-                where I contribute to local development initiatives and mentor aspiring developers.
+                I value teamwork and leadership. At university, I served as President of ChessSpirit Club, organizing
+                activities and building a supportive community-skills I bring into engineering teams and agile projects.
               </p>
             </div>
           </div>

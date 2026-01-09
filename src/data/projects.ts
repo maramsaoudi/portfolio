@@ -5,7 +5,7 @@ export interface Project {
   image: string
   tech: string[]
   github?: string
-  demo: string
+  demo?: string
   year: string
   type: string
   duration?: string
@@ -18,101 +18,128 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'p1',
-    title: 'Moving CRM Platform',
-    description: 'A comprehensive CRM platform built with React and Django, featuring user roles, Docker containerization, and CI/CD pipeline integration.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
-    tech: ['React', 'Django', 'MySQL', 'Docker'],
+    title: 'BIE CRM Modernization (Joomla 5 + CiviCRM 6 + React)',
+    description:
+      'Modernized an internal CRM by upgrading Joomla 3 to Joomla 5 and migrating CiviCRM 4.7 to CiviCRM 6. Built new REST endpoints and integrated a React + Vite frontend with Tailwind CSS, improving workflows and maintainability.',
+    image: 'assets/images/projects/BIECRM.png',
+    gallery: [
+      'assets/images/projects/BIECRM-1.png',
+      'assets/images/projects/BIECRM-2.png',
+    ],
+    tech: ['Joomla 5', 'CiviCRM', 'PHP 8.2', 'REST APIs', 'React', 'Vite', 'Tailwind CSS'],
     demo: 'https://lnkd.in/eAKEksG3',
-    year: '2024',
-    duration: '3 months',
-    type: 'Professional'
+    github: 'https://github.com/saifchaalene/bie-crm-react',
+    year: '2025',
+    duration: 'Mar - Sept 2025',
+    type: 'Professional',
   },
   {
     id: 'p2',
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with Angular frontend and Django REST API backend, containerized with Docker and automated CI/CD.',
+    title: 'FIDNESS — E-commerce Marketplace + Golang Microservices',
+    description:
+      'Contributed to an online marketplace storefront and core business modules (catalog, cart, coupons, orders, OTP authentication). Built Golang microservices and integrated external banking APIs for transaction validation and real-time callbacks.',
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&auto=format&fit=crop',
-    tech: ['Angular', 'Django', 'MySQL', 'Docker'],
-    github: 'https://github.com/Majicl21/E-commerce-site',
-    demo: 'https://github.com/Majicl21/E-commerce-site',
+    gallery: [
+      'assets/images/projects/Findness-1.png',
+      'assets/images/projects/Findness-2.png',
+
+    ],
+    tech: ['Golang', 'Microservices', 'APIs', 'Authentication', 'E-commerce'],
+    github: 'https://github.com/saifchaalene',
+    demo: 'https://github.com/saifchaalene',
     year: '2024',
-    duration: '3 months',
-    type: 'Professional'
+    duration: 'Oct 2024 – Jan 2025',
+    type: 'Professional',
   },
   {
     id: 'p3',
-    title: 'Healthcare Insurance App',
-    description: 'Enterprise healthcare application with Angular frontend and Spring Boot backend, featuring role-based access control and improved onboarding efficiency.',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop',
-    tech: ['Angular', 'Spring Boot', 'Scrum', 'UML'],
-    demo: 'https://github.com/SamehAMKouki',
-    year: '2023',
-    duration: '3 months',
-    type: 'Professional'
+    title: 'WEVIOO — .NET REST Services + Angular Components',
+    description:
+      'Implemented RESTful backend services using C#/.NET and built reusable Angular components. Contributed to code quality improvements through reviews and documentation.',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop',
+    gallery: [
+
+    ],
+    tech: ['C#', '.NET', 'REST APIs', 'Angular'],
+    github: 'https://github.com/saifchaalene',
+    year: '2024',
+    duration: 'Jun – Aug 2024',
+    type: 'Professional',
   },
   {
     id: 'p4',
-    title: 'Inventory Management System',
-    description: 'Automated inventory tracking system built with Laravel and MySQL, reducing manual reconciliation effort by 50% through efficient stock and order management.',
+    title: 'ALFA Computers — React Frontend + Node.js & MongoDB',
+    description:
+      'Built frontend modules in React.js integrated with REST APIs and supported backend development using Node.js and MongoDB. Assisted with deployment tasks and production rollout support.',
     image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&auto=format&fit=crop',
-    tech: ['Laravel', 'PHP', 'MySQL'],
-    demo: 'https://github.com/SamehAMKouki',
-    year: '2022',
-    duration: '2 months',
-    type: 'Professional'
+    gallery: [
+
+    ],
+    tech: ['React', 'Node.js', 'MongoDB', 'REST APIs'],
+    demo: 'https://github.com/saifchaalene',
+    year: '2023',
+    duration: 'Aug 2023',
+    type: 'Professional',
   },
+
   {
     id: 'p5',
-    title: 'Timesheet Management',
-    description: 'Modern timesheet tracking application with React frontend and .NET backend, featuring Docker containerization and automated CI/CD deployment pipeline.',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop',
-    tech: ['React', '.NET', 'Docker', 'CI/CD'],
-    github: 'https://github.com/Majicl21/PDL',
+    title: 'Music Streaming Platform',
+    description:
+      'Music streaming web application with playlist management, user sessions, and secure OAuth2/JWT authentication. Responsive UI built with Tailwind CSS.',
+    image: 'assets/images/projects/music-1.png',
+    gallery: [
+      'assets/images/projects/music-2.png',
+    ],
+    tech: ['React', 'Node.js', 'Express', 'OAuth2', 'JWT', 'Tailwind CSS'],
+    github: 'https://github.com/saifchaalene',
     demo: 'https://drive.google.com/file/d/1Hb0T5XlrdvgUkWc58DeaDPWw__mSVibq/view',
     year: '2024',
+    duration: 'Apr – Jun 2024',
     type: 'Academic',
-    detailedDescription: 'The Timesheet Management System is a secure, feature-rich platform built to streamline employee time tracking, project management, and attendance monitoring. With a modern, responsive UI and advanced analytics, it delivers real-time insights that enhance efficiency and decision-making. Employees can log work hours, submit leave requests, and track daily tasks with ease. Managers can review and approve timesheets quickly, while admins manage users, roles, and projects effortlessly.',
-    keyFeatures: [
-      'Intuitive employee time logging and leave request submission',
-      'Fast manager review and approval workflows',
-      'Comprehensive admin panel for users, roles, and projects',
-      'Advanced statistics on total users and work hours (daily/weekly/monthly)',
-      'Visual dashboards with bar and curve charts showing hours per employee',
-      'Project tracking trends and analytics',
-      'Interactive calendar for tasks, leaves, and timesheets management',
-      'Day, week, and month views for better time visualization',
-      'Smart filters and dynamic tables for efficient data management',
-      'Fully responsive design for desktop and mobile devices',
-      'Automated statistics generation and reporting'
-    ],
-    metrics: [
-      'Up to 40% faster approvals with intuitive workflows',
-      'Reduces manual reporting effort by 60% through automation',
-      'Real-time insights for enhanced decision-making',
-      'Improved accuracy in time tracking and attendance',
-      'Streamlined workforce planning capabilities'
-    ]
   },
   {
     id: 'p6',
-    title: 'Freelancer Platform',
-    description: 'Full-stack freelancing marketplace connecting clients with freelancers, built with React and Django with real-time messaging and project management features.',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop',
-    tech: ['React', 'Django'],
-    github: 'https://github.com/Majicl21/Django-JS',
-    demo: 'https://github.com/Majicl21/Django-JS',
-    year: '2023',
-    type: 'Academic'
+    title: 'DevOps Foyer — CI/CD Pipeline',
+    description:
+      'Designed and deployed a CI/CD pipeline with automated build and testing, SonarQube analysis, Docker image generation, and Jenkins orchestration. Monitoring with Grafana and artifact storage on Nexus.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
+    gallery: [
+    ],
+    tech: ['CI/CD', 'Jenkins', 'Docker', 'SonarQube', 'Grafana', 'Nexus'],
+    github: 'https://github.com/saifchaalene',
+    demo: 'https://github.com/saifchaalene',
+    year: '2024',
+    duration: 'Mar – May 2024',
+    type: 'Academic',
   },
   {
     id: 'p7',
-    title: 'Training Management System',
-    description: 'Comprehensive training management platform with Angular and Flutter mobile app, powered by Spring Boot microservices architecture for scalability.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop',
-    tech: ['Angular', 'Flutter', 'Spring Boot', 'Microservices'],
-    github: 'https://github.com/Majicl21/Integration-project',
-    demo: 'https://github.com/Majicl21/Integration-project',
-    year: '2022',
-    type: 'Academic'
-  }
+    title: 'EpicJourneys — Travel Manager',
+    description:
+      'Java MVC application with a MySQL backend for managing events, itineraries, reservations, and user interactions.',
+    image: 'assets/images/projects/Epicjourney.png',
+    gallery: [
+    ],
+    tech: ['Java', 'MVC', 'MySQL'],
+    github: 'https://github.com/saifchaalene',
+    demo: 'https://drive.google.com/file/d/1WLpkPyckpkajilSxICuZu_TswELUuOG3/view?usp=drive_link',
+    year: '2024',
+    duration: 'Dec 2023 – Feb 2024',
+    type: 'Academic',
+  },
+  {
+    id: 'p8',
+    title: 'Co & Co — Carpooling and Colocation Platform',
+    description:
+      'Full-stack platform combining a Spring Boot backend with an Angular frontend, offering listings, user profiles, and search features for students.',
+    image: 'assets/images/projects/Carpooling.png',
+    gallery: [
+    ],
+    tech: ['Spring Boot', 'Angular', 'REST APIs'],
+    demo: 'https://github.com/saifchaalene',
+    year: '2023',
+    duration: 'Sept – Nov 2023',
+    type: 'Academic',
+  },
 ]
